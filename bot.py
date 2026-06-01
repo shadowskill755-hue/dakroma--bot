@@ -7,9 +7,9 @@ import random
 import xml.etree.ElementTree as ET
 from datetime import datetime
 
-BOT_TOKEN = "8940652640:AAHcdloBLHb-mmc9-qF67kZ3liUNMymk1lg"  # ← paste your token here
+import os
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
-bot = telebot.TeleBot(BOT_TOKEN)
 DOWNLOAD_DIR = "/sdcard/dakroma_bot/downloads"
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
